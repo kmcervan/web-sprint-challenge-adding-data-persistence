@@ -7,12 +7,12 @@ module.exports = {
 }
 
 function addProjects(projects_id){
-    return db('project').insert(projects_id)
+    return db('projects').insert(projects_id)
     .then(([id])=>{
-        return db('project').where('project_id', id).first()
+        return db('projects').where('project_id', id).first()
     })
 }
 
 function getProjects(){
-    return db('project')
+    return db('projects')
 }

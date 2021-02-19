@@ -24,7 +24,7 @@ router.post('', (req, res)=>{
     })
 })
 
-router.get('', booleanS, (req, res)=>{
+router.get('', (req, res)=>{
     Task.getTask()
     .then(tasks => {
            res.json(tasks); 
